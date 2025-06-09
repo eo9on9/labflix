@@ -11,3 +11,16 @@
 ## 기술 스택
 
 - NextJS, TypeScript, Vanilla Extract, TMDB API
+
+## TODO Feature
+
+- [ ] **메인 화면**
+  - 시각적 연출 등
+- [ ] **로그인 화면**
+  - Form 상태관리 및 유효성 검증 등
+- [ ] **탐색(홈) 화면**
+  - Skeleton UI, Lazy Loading 등
+- [ ] **상세 화면**
+  - URL-모달 연동, 브라우저 내비게이션 대응 등
+- [ ] **검색 화면**
+  - 입력 디바운싱 처리, 쿼리 파라미터 상태 동기화 등
