@@ -1,44 +1,61 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-*: initial;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Blue */
+  --color-blue-50: #e8eef4;
+  --color-blue-100: #d3dbe6;
+  --color-blue-200: #b7c2d4;
+  --color-blue-300: #93a1bb;
+  --color-blue-400: #6d7fa1;
+  --color-blue-500: #4f6589;
+  --color-blue-600: #3e5879;
+  --color-blue-700: #2f4563;
+  --color-blue-800: #24364d;
+  --color-blue-900: #1a2538;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  /* Brown */
+  --color-brown-50: #fbf9f5;
+  --color-brown-100: #f5efe7;
+  --color-brown-200: #eee5da;
+  --color-brown-300: #e5d8c8;
+  --color-brown-400: #dbcab7;
+  --color-brown-500: #d3bead;
+  --color-brown-600: #c5b2a3;
+  --color-brown-700: #b7a699;
+  --color-brown-800: #98897e;
+  --color-brown-900: #7c6f67;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* Red */
+  --color-red-50: #fff5f5;
+  --color-red-100: #ffe3e3;
+  --color-red-200: #ffbdbd;
+  --color-red-300: #ff9b9b;
+  --color-red-400: #f97070;
+  --color-red-500: #f04444;
+  --color-red-600: #d73737;
+  --color-red-700: #b42c2c;
+  --color-red-800: #922020;
+  --color-red-900: #771a1a;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+  /* Gray */
+  --color-gray-50: #ffffff;
+  --color-gray-100: #e6e6e6;
+  --color-gray-200: #cccccc;
+  --color-gray-300: #b3b3b3;
+  --color-gray-400: #999999;
+  --color-gray-500: #808080;
+  --color-gray-600: #666666;
+  --color-gray-700: #4d4d4d;
+  --color-gray-800: #333333;
+  --color-gray-900: #000000;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  /* Semantic */
+  --color-primary: #3e5879;
+  --color-primary-light: #d3dbe6;
+  --color-secondary: #c5b2a3;
+  --color-secondary-light: #f5efe7;
+  --color-negative: #d73737;
+  --color-negative-light: #ffe3e3;
 }
