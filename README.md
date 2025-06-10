@@ -10,7 +10,7 @@
 
 ## 기술 스택
 
-- NextJS, TypeScript, Vanilla Extract, TMDB API
+- NextJS, TypeScript, TailwindCSS, TMDB API
 
 ## 구현 목표
 
