@@ -1,7 +1,19 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('/assets/fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
 @theme {
   --color-*: initial;
+
+  --font-pretendard: 'Pretendard Variable', Arial, Helvetica, sans-serif;
+
+  --default-font-family: var(--font-pretendard);
 
   /* Blue */
   --color-blue-50: #e8eef4;
@@ -52,10 +64,10 @@
   --color-gray-900: #000000;
 
   /* Semantic */
-  --color-primary: #3e5879;
-  --color-primary-light: #d3dbe6;
-  --color-secondary: #c5b2a3;
-  --color-secondary-light: #f5efe7;
-  --color-negative: #d73737;
-  --color-negative-light: #ffe3e3;
+  --color-primary: var(--color-blue-600);
+  --color-primary-light: var(--color-blue-100);
+  --color-secondary: var(--color-brown-600);
+  --color-secondary-light: var(--color-brown-100);
+  --color-negative: var(--color-red-600);
+  --color-negative-light: var(--color-red-100);
 }
