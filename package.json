@@ -10,6 +10,7 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
+    "@vanilla-extract/css": "^1.17.4",
     "labflix": "link:",
     "next": "15.3.4",
     "react": "^19.0.0",
@@ -22,6 +23,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vanilla-extract/next-plugin": "^2.4.14",
     "eslint": "^9",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.0",
