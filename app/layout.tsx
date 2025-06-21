@@ -1,3 +1,4 @@
+import { RootLayout } from '@/sources/app/ui/RootLayout'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -5,14 +6,4 @@ export const metadata: Metadata = {
   description: 'Awesome movie web app',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
-}
+export default RootLayout
