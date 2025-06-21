@@ -1,16 +1,53 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import js from '@eslint/js'
+import pluginNext from '@next/eslint-plugin-next'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import prettierPlugin from 'eslint-plugin-prettier'
+import pluginReact from 'eslint-plugin-react'
+import pluginReactHooks from 'eslint-plugin-react-hooks'
+import tseslint from 'typescript-eslint'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+export default [
+  /** ESLint 기본 권장 룰 */
+  js.configs.recommended,
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+  /** 타입스크립트 권장 룰 */
+  ...tseslint.configs.recommended,
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+  {
+    /** 리액트 권장 룰 */
+    ...pluginReact.configs.flat.recommended,
+    /** 자동으로 React 버전 감지해서 적용 */
+    settings: { react: { version: 'detect' } },
+  },
 
-export default eslintConfig;
+  {
+    plugins: {
+      'react-hooks': pluginReactHooks,
+      '@next/next': pluginNext,
+      prettier: prettierPlugin,
+    },
+    rules: {
+      /** 리액트 훅 권장 룰 */
+      ...pluginReactHooks.configs.recommended.rules,
+      /** Next 권장 룰 */
+      ...pluginNext.configs.recommended.rules,
+      /** Next Core Vital 권장 룰 */
+      ...pluginNext.configs['core-web-vitals'].rules,
+      /** Prettier 포맷팅 오류를 ESLint 오류로 처리 */
+      'prettier/prettier': 'error',
+      /** import React 룰 끔 */
+      'react/react-in-jsx-scope': 'off',
+      /** 사용하지 않는 변수 룰 _로 시작하면 무시 */
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
+    },
+  },
+
+  /** Prettier와 충돌할 수 있는 ESLint 포맷팅 룰 끔 */
+  eslintConfigPrettier,
+]
