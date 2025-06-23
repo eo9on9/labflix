@@ -1,4 +1,5 @@
-import { globalFontFace } from '@vanilla-extract/css'
+import { font } from '@/sources/shared/tokens'
+import { globalFontFace, globalStyle } from '@vanilla-extract/css'
 
 globalFontFace('Pretendard', [
   {
@@ -13,4 +14,32 @@ globalFontFace('Pretendard', [
     fontStyle: 'normal',
     fontDisplay: 'swap',
   },
+  {
+    src: 'url("/assets/fonts/Pretendard-ExtraBold.woff2") format("woff2")',
+    fontWeight: '800',
+    fontStyle: 'normal',
+    fontDisplay: 'swap',
+  },
 ])
+
+globalStyle('*', {
+  boxSizing: 'border-box',
+  fontFamily: 'inherit',
+  color: 'inherit',
+})
+
+globalStyle('a', {
+  textDecoration: 'none',
+})
+
+globalStyle('html', {
+  fontFamily: font.pretendard,
+  background: '#000',
+})
+
+globalStyle('button', {
+  all: 'unset',
+  boxSizing: 'border-box',
+  fontFamily: 'inherit',
+  color: 'inherit',
+})
