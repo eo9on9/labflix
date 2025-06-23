@@ -11,14 +11,9 @@ export const wrap = style({
   right: 0,
   bottom: 0,
 
+  display: 'flex',
+  justifyContent: 'center',
+
   paddingBlock: 64,
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-})
-
-export const panel = style({
-  width: 800,
-  height: 2000,
-
-  marginInline: 'auto',
-  backgroundColor: '#fff',
 })
