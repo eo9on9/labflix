@@ -34,6 +34,7 @@ globalStyle('a', {
 
 globalStyle('html', {
   fontFamily: font.pretendard,
+  color: '#222',
   background: '#000',
 })
 
